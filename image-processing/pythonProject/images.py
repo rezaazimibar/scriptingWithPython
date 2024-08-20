@@ -1,6 +1,8 @@
 from PIL import Image, ImageFilter
 
 img = Image.open("./pokedex/pikachu.jpg")
+astro = Image.open("./pokedex/astro.jpg")
+
 print(img)
 
 filtered_image = img.filter(ImageFilter.BLUR)
@@ -17,3 +19,12 @@ routing_image.save("routed.png", "png")
 box1 = (100, 100, 400, 400)
 cropped_image = img.crop(box1)
 cropped_image.save("crop.png","png")
+
+astro_image = astro.size
+print(astro_image)
+new_astro = astro.resize((400, 400))
+new_astro.save("newAstro.png", "png")
+
+astro.thumbnail((400, 200))
+astro.save("newAstro1.png")
+print(astro.size)
