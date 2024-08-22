@@ -29,6 +29,7 @@
 # pdf_combiner(inputs)
 
 # --------------------------------------------exercise---------------------------------------------
+
 import PyPDF2
 
 
@@ -43,5 +44,5 @@ for page in template.pages:
     page.merge_page(water_mark.pages[0])
     out_put.add_page(page)
 
-    with open('new1.pdf', "wb") as file:
-        out_put.write(file)
+with open('new1.pdf', "wb") as file:
+    out_put.write(file)
